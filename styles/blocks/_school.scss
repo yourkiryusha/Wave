@@ -1,0 +1,48 @@
+.school {
+  padding: var(--section-padding-y) 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+  }
+
+  &__title {
+    font-family: 'Raleway SemiBold', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 85px;
+      background: url('../img/logo-alt.jpg') no-repeat;
+      transform: translate(0, 25%);
+    }
+  }
+
+  &__description {
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 120px;
+    row-gap: 30px;
+  }
+
+  &__item {
+    font-family: 'RobotoCondensed Light', sans-serif;
+    font-size: 14px;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        @include grid-item($i);
+      }
+    }
+  }
+}

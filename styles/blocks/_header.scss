@@ -1,0 +1,61 @@
+.header {
+  background: url('../img/header/header-bg.jpg') center/cover no-repeat;
+  height: 1080px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    row-gap: 243px;
+  }
+
+  &__menu {
+    display: flex;
+    column-gap: 185px;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 45px;
+      color: var(--color-light);
+    }
+  }
+
+  &__title {
+    font-family: 'Raleway Bold', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    color: var(--color-title);
+  }
+
+  &__description {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-inline: auto;
+    padding-top: 72px;
+  }
+
+  &__link {
+    position: relative;
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 100%;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--color-accent);
+      transition-duration: var(--transition-duration);
+    }
+  }
+}
