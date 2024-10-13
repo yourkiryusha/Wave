@@ -1,0 +1,22 @@
+.quote {
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: 'RobotoCondensed Regular', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.11;
+    text-align: center;
+  }
+
+  &__description {
+    font-family: 'RobotoCondensed Light', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    text-align: end;
+  }
+}

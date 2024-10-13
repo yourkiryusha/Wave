@@ -1,0 +1,38 @@
+.team {
+  padding-bottom: var(--section-padding-y);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 210px;
+    margin-inline: 360px;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 120px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    &-title {
+      padding-top: 25px;
+      font-family: 'RobotoCondensed Bold', sans-serif;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    &-description {
+      font-family: 'RobotoCondensed Regular', sans-serif;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.indicators {
+  padding: 0 0 var(--section-padding-y);
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__title {
+    font-family: 'RobotoCondensed Bold', sans-serif;
+    font-size: 64px;
+    text-align: center;
+  }
+
+  &__description {
+    font-family: 'RobotoCondensed Light', sans-serif;
+    font-size: 14px;
+    text-align: center;
+  }
+}

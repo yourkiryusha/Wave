@@ -8,23 +8,7 @@
   }
 
   &__title {
-    font-family: 'Raleway SemiBold', sans-serif;
-    font-size: 48px;
-    text-align: center;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-      width: 48px;
-      height: 85px;
-      background: url('../img/logo-alt.jpg') no-repeat;
-      transform: translate(0, 25%);
-    }
-  }
-
-  &__description {
-
+    @include title;
   }
 
   &__list {
