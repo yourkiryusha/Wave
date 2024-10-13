@@ -22,6 +22,17 @@
     flex-direction: column;
     row-gap: 5px;
 
+    &-img {
+      overflow: hidden;
+
+      &:hover {
+        .team__img {
+          transform: scale(1.1);
+          transition-duration: var(--transition-duration);
+        }
+      }
+    }
+
     &-title {
       padding-top: 25px;
       font-family: 'RobotoCondensed Bold', sans-serif;

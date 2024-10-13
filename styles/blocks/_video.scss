@@ -1,21 +1,20 @@
 .video {
   padding: var(--section-padding-y) 0;
-
-  &__img {
-    position: relative;
-  }
+  position: relative;
 
   &__link {
-    position: relative;
 
-    &::after {
+    &-icon {
       position: absolute;
-      content: '';
-      background: url('../img/video/play.svg') no-repeat;
-      top: -350px;
-      left: 500px;
-      width: 100px;
-      height: 100px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition-duration: var(--transition-duration);
+
+      &:hover {
+        width: 85px;
+        height: 98px;
+      }
     }
   }
 }

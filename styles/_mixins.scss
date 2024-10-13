@@ -41,7 +41,7 @@
     content: '';
     width: 48px;
     height: 85px;
-    background: url('../img/logo-alt.jpg') no-repeat;
+    background: url('../img/logo-icon.svg') no-repeat;
     transform: translate(0, 25%);
   }
 }
@@ -57,5 +57,25 @@
     width: 50px;
     height: 50px;
     background: url('../img/benefits/#{$index}.svg') no-repeat;
+  }
+}
+
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  padding: 25px 90px;
+  font-size: 24px;
+  background-color: var(--color-light);
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+
+  &:hover {
+    color: var(--color-light);
+    background-color: var(--color-accent);
   }
 }

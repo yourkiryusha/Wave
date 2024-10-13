@@ -178,7 +178,7 @@
             </div>
         </section>
         <section class="submissive-peaks">
-            <div class="submissive-peaks__inner container">
+            <div class="submissive-peaks__inner">
                 <div class="submissive-peaks__header">
                     <h2 class="submissive-peaks__title">
                         ПОКОРЯЙ ВЕРШИНЫ
@@ -202,7 +202,9 @@
                         </li>
                     </ul>
                 </div>
-                <img src="img/submissive-peaks/submissive-peaks-bg.jpg" alt="Submissive Peaks" class="submissive-peaks__img" width="960" height="850" loading="lazy">
+                <div class="submissive-peaks__body">
+                    <img src="img/submissive-peaks/submissive-peaks-bg.jpg" alt="Submissive Peaks" class="submissive-peaks__img" width="960" height="850" loading="lazy">
+                </div>
             </div>
         </section>
         <section class="gallery">
@@ -269,8 +271,10 @@
         </section>
         <section class="video">
             <div class="video__inner container">
-                <img src="img/video/video-bg.jpg" alt="Ocean" class="video__img" width="1200" height="600" loading="lazy">
-                <a href="#" class="video__link"></a>
+                <a href="https://www.youtube.com/watch?v=ma67yOdMQfs&ab_channel=RedBullSurfing" class="video__link">
+                    <img src="./img/video/video-bg.jpg" alt="" class="video__link-img" width="1200" height="600" loading="lazy">
+                    <img src="./img/video/play.svg" alt="" class="video__link-icon" width="75" height="88" loading="lazy">
+                </a>
             </div>
         </section>
         <section class="indicators">
@@ -338,7 +342,9 @@
                 <div class="team__body">
                     <ul class="team__list">
                         <li class="team__item">
-                            <img src="./img/team/1.jpg" alt="Instructor" class="team__item-img" width="330" height="450" loading="lazy">
+                            <div class="team__item-img">
+                                <img src="./img/team/1.jpg" alt="Instructor" class="team__img" width="330" height="450" loading="lazy">
+                            </div>
                             <div class="team__item-title">
                                 Mike
                             </div>
@@ -347,7 +353,9 @@
                             </p>
                         </li>
                         <li class="team__item">
-                            <img src="./img/team/2.jpg" alt="Instructor" class="team__item-img" width="330" height="450" loading="lazy">
+                            <div class="team__item-img">
+                                <img src="./img/team/2.jpg" alt="Instructor" class="team__img" width="330" height="450" loading="lazy">
+                            </div>
                             <div class="team__item-title">
                                 Mary
                             </div>
@@ -356,7 +364,9 @@
                             </p>
                         </li>
                         <li class="team__item">
-                            <img src="./img/team/3.jpg" alt="Instructor" class="team__item-img" width="330" height="450" loading="lazy">
+                            <div class="team__item-img">
+                                <img src="./img/team/3.jpg" alt="Instructor" class="team__img" width="330" height="450" loading="lazy">
+                            </div>
                             <div class="team__item-title">
                                 Ольга
                             </div>
@@ -513,7 +523,7 @@
                                     </p>
                                 </li>
                             </ul>
-                            <div class="services__item-price">
+                            <div class="services__item-price price__last">
                                 1450
                             </div>
                         </li>
@@ -521,6 +531,94 @@
                 </div>
             </div>
         </section>
+        <section class="map">
+            <div class="map__inner">
+                <img src="./img/map/map-bg.jpg" alt="Map" class="map__img" width="1473" height="640" loading="lazy">
+            </div>
+        </section>
+        <section class="request">
+            <div class="request__inner">
+                <div class="request__header">
+                    <h2 class="request__title">
+                        ОСТАВИТЬ ЗАЯВКУ
+                    </h2>
+                </div>
+                <div class="request__body">
+                    <form class="request__form">
+                        <ul class="request__form-list">
+                            <li class="request__form-item">
+                                <input type="text" class="request__form-input" id="name" required>
+                                <label for="name" class="request__form-label">Имя</label>
+                            </li>
+                            <li class="request__form-item">
+                                <input type="text" class="request__form-input input__mid" id="phone" required>
+                                <label for="phone" class="request__form-label">Телефон</label>
+                            </li>
+                            <li class="request__form-item">
+                                <input type="text" class="request__form-input input__bottom" id="message" required>
+                                <label for="message" class="request__form-label">
+                                    Оставьте сообщение, и мы<br>
+                                    свяжемся с Вами в ближайшее<br>
+                                    время
+                                </label>
+                            </li>
+                        </ul>
+                        <button class="request__form-button" type="submit">ОТПРАВИТЬ</button>
+                    </form>
+                    <div class="request__description">
+                        <ul class="request__description-list">
+                            <li class="request__description-item">
+                                <p class="request__description-text">
+                                    Есть вопрос?<br>
+                                    Вы можете связаться с нами:
+                                </p>
+                            </li>
+                            <li class="request__description-item">
+                                <p class="request__description-text">
+                                    WhatsApp, Viber, Telegram<br>
+                                    +3 467 486-37-88
+                                </p>
+                            </li>
+                            <li class="request__description-item">
+                                <p class="request__description-text">
+                                    Avenida grandes playas 79,<br>
+                                    Corralejo la Oliva Fuerteventura,<br>
+                                    Spain. 35660
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <footer class="request__footer">
+                    <div class="request__contacts">
+                        <ul class="request__contacts-list">
+                            <li class="request__contacts-item">
+                                <a class="request__contacts-link">
+                                    INSTAGRAM
+                                </a>
+                            </li>
+                            <li class="request__contacts-item">
+                                <a class="request__contacts-link link__mid">
+                                    FACEBOOK
+                                </a>
+                            </li>
+                            <li class="request__contacts-item">
+                                <a class="request__contacts-link">
+                                    YOUTUBE
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <a href="#" class="footer__logo logo">
+                <img src="./img/logo.svg" alt="Logo" class="footer__img" width="60" height="63" loading="lazy">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

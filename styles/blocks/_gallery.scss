@@ -24,24 +24,7 @@
     }
 
     &-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 370px;
-      height: 70px;
-      margin-inline: auto;
-      padding: 25px 90px;
-      font-size: 24px;
-      background-color: var(--color-light);
-      border: 1px solid #C4C4C4;
-      box-sizing: border-box;
-      cursor: pointer;
-      transition-duration: var(--transition-duration);
-
-      &:hover {
-        color: var(--color-light);
-        background-color: var(--color-accent);
-      }
+      @include button;
     }
   }
 
@@ -68,6 +51,17 @@
   }
 
   &__img {
+
+    &-item {
+      overflow: hidden;
+      &:hover {
+        .gallery__img-img {
+          transform: scale(1.2);
+          transition-duration: var(--transition-duration);
+        }
+      }
+    }
+
     &-list-top {
       display: grid;
       grid-template-columns: 580px 290px 250px;

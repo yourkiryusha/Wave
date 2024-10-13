@@ -1,0 +1,17 @@
+.map {
+  padding: 200px 220px;
+
+  &__inner {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: url('../img/map/map-icon.svg') no-repeat;
+      width: 57px;
+      height: 70px;
+      top: 16%;
+      left: 48%;
+    }
+  }
+}

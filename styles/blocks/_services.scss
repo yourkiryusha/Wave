@@ -60,3 +60,9 @@
     }
   }
 }
+
+.price__last {
+  &::after {
+    left: 68%;
+  }
+}
