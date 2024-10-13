@@ -1,15 +1,52 @@
 .gallery {
   padding: 0 0 var(--section-padding-y);
 
+  @include desktop {
+    padding-bottom: 150px;
+    padding-inline: 10px;
+  }
+
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    padding-bottom: 50px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     row-gap: 210px;
     margin-inline: 350px;
+
+    @include desktop-below {
+      margin-inline: 0;
+    }
+
+    @include desktop {
+      row-gap: 75px;
+    }
   }
 
   &__title {
     @include title;
+
+    @include desktop {
+      font-size: 40px;
+    }
+
+    @include tablet {
+      font-size: 34px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+
+      &::after {
+        transform: translate(-50%, 25%);
+      }
+    }
   }
 
   &__body {
@@ -17,14 +54,48 @@
     flex-direction: column;
     row-gap: 50px;
 
+    @include desktop-below {
+      margin-inline: auto;
+    }
+
+    @include mobile {
+      row-gap: 30px;
+    }
+
     &-img {
       display: flex;
       flex-direction: column;
       row-gap: 40px;
+
+      @include tablet {
+        row-gap: 30px;
+      }
+
+      @include mobile {
+        row-gap: 20px;
+      }
     }
 
     &-button {
       @include button;
+
+      @include desktop {
+        width: 300px;
+        height: 60px;
+        padding: 10px 60px;
+        margin-inline: auto;
+        font-size: 22px;
+      }
+
+      @include tablet {
+        height: 55px;
+        font-size: 20px;
+      }
+
+      @include mobile {
+        height: 45px;
+        font-size: 18px;
+      }
     }
   }
 
@@ -47,11 +118,22 @@
       &:hover {
         color: var(--color-accent);
       }
+
+      @include desktop {
+        font-size: 22px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
   }
 
   &__img {
-
     &-item {
       overflow: hidden;
       &:hover {
@@ -66,12 +148,44 @@
       display: grid;
       grid-template-columns: 580px 290px 250px;
       column-gap: 40px;
+
+      @include desktop {
+        grid-template-columns: 580px 290px;
+      }
+
+      @include tablet {
+        display: flex;
+        column-gap: 20px;
+      }
     }
 
     &-list-bottom {
       display: grid;
       grid-template-columns: 250px 290px 580px;
       column-gap: 40px;
+
+      @include desktop {
+        grid-template-columns: 290px 580px;
+      }
+
+      @include tablet {
+        display: flex;
+        column-gap: 20px;
+      }
     }
+  }
+}
+
+.item__top-bottom,
+.item__bottom-top {
+  @include desktop {
+    display: none;
+  }
+}
+
+.item__top-mid,
+.item__bottom-mid {
+  @include mobile {
+    display: none;
   }
 }

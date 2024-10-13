@@ -3,6 +3,24 @@
     display: flex;
     column-gap: 83px;
     padding-bottom: var(--section-padding-y);
+
+    @include desktop-below {
+      flex-direction: column;
+      justify-content: center;
+      margin-inline: auto;
+    }
+
+    @include desktop {
+      padding: 150px 0;
+    }
+
+    @include tablet {
+      padding: 100px 0;
+    }
+
+    @include mobile {
+      padding: 50px 0;
+    }
   }
 
   &__header {
@@ -10,12 +28,25 @@
     flex-direction: column;
     row-gap: 100px;
     max-width: 860px;
-    padding-top: var(--section-padding-y);
-    padding-left: 360px;
+    padding: var(--section-padding-y) 0 0 360px;
+
+    @include desktop-below {
+      margin-inline: auto;
+      padding: 0;
+    }
+
+    @include desktop {
+      row-gap: 50px;
+      padding-inline: 10px;
+    }
   }
 
   &__body {
     overflow: hidden;
+
+    @include desktop-below {
+      display: none;
+    }
 
     &:hover {
       .submissive-peaks__img {
@@ -28,6 +59,26 @@
   &__title {
     @include title;
     min-width: 511px;
+
+    @include desktop-below {
+      min-width: 0;
+    }
+
+    @include desktop {
+      font-size: 40px;
+    }
+
+    @include tablet {
+      font-size: 34px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+
+      &::after {
+        transform: translate(-50%, 25%);
+      }
+    }
   }
 
   &__list {

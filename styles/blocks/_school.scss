@@ -1,14 +1,46 @@
 .school {
   padding: var(--section-padding-y) 0;
 
+  @include desktop {
+    padding: 150px 0;
+  }
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     row-gap: 100px;
+
+    @include tablet {
+      row-gap: 75px;
+    }
   }
 
   &__title {
     @include title;
+
+    @include desktop {
+      font-size: 40px;
+    }
+
+    @include tablet {
+      font-size: 34px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+
+      &::after {
+        transform: translate(-50%, 25%);
+      }
+    }
   }
 
   &__list {
@@ -17,6 +49,12 @@
     grid-template-rows: repeat(4, auto);
     column-gap: 120px;
     row-gap: 30px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
   }
 
   &__item {
