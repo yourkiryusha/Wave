@@ -592,6 +592,11 @@ h3 {
     row-gap: 50px;
   }
 }
+.benefits__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
 .benefits__title {
   font-family: "Raleway SemiBold", sans-serif;
   font-size: 48px;
