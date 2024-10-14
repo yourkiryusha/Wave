@@ -144,6 +144,16 @@
       }
     }
 
+    &-img {
+      @include tablet {
+        height: auto;
+      }
+
+      @include mobile {
+        height: auto;
+      }
+    }
+
     &-list-top {
       display: grid;
       grid-template-columns: 580px 290px 250px;
