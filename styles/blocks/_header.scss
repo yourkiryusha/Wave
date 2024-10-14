@@ -1,16 +1,16 @@
 .header {
-  background: url('../img/header/header-bg.jpg') center/cover no-repeat;
-  height: 1080px;
   position: relative;
+  height: 1080px;
+  background: url('../img/header/header-bg.jpg') center/cover no-repeat;
 
   &::after {
     position: absolute;
     content: '';
-    background: url('../img/header/header-icon.svg') no-repeat;
     width: 20px;
     height: 69px;
     top: 80%;
     left: 50%;
+    background: url('../img/header/header-icon.svg') no-repeat;
     transform: translate(-50%, 50%);
   }
 
@@ -29,8 +29,8 @@
       display: flex;
       align-items: center;
       column-gap: 45px;
-      color: var(--color-light);
       margin: auto;
+      color: var(--color-light);
       transform: translate(-4%, 0);
 
       @include desktop {

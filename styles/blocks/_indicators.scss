@@ -1,11 +1,35 @@
 .indicators {
-  padding: 0 0 var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+
+  @include desktop {
+    padding-bottom: 150px;
+  }
+
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    padding-bottom: 50px;
+  }
 
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 100px;
+
+    @include desktop {
+      column-gap: 75px;
+    }
+
+    @include tablet {
+      column-gap: 50px;
+    }
+
+    @include mobile {
+      column-gap: 30px;
+    }
   }
 
   &__item {
@@ -18,11 +42,27 @@
     font-family: 'RobotoCondensed Bold', sans-serif;
     font-size: 64px;
     text-align: center;
+
+    @include desktop {
+      font-size: 54px;
+    }
+
+    @include tablet {
+      font-size: 44px;
+    }
+
+    @include mobile {
+      font-size: 34px;
+    }
   }
 
   &__description {
     font-family: 'RobotoCondensed Light', sans-serif;
     font-size: 14px;
     text-align: center;
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 }

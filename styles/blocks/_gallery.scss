@@ -1,5 +1,5 @@
 .gallery {
-  padding: 0 0 var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 
   @include desktop {
     padding-bottom: 150px;

@@ -1,15 +1,50 @@
 .services {
+  padding: calc(var(--section-padding-y) / 2) 0;
+
+  @include tablet {
+    padding-inline: 10px;
+  }
+
+  @include mobile {
+    padding: 50px 10px;
+  }
 
   &__inner {
     display: flex;
     flex-direction: column;
-    padding: var(--section-padding-y) 0;
-    margin-inline: 360px;
     row-gap: 228px;
+
+    @include desktop {
+      row-gap: 150px;
+    }
+
+    @include tablet {
+      row-gap: 100px;
+    }
+
+    @include mobile {
+      row-gap: 75px;
+    }
   }
 
   &__title {
     @include title;
+
+    @include desktop {
+      font-size: 40px;
+    }
+
+    @include tablet {
+      font-size: 34px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+
+      &::after {
+        transform: translate(-50%, 25%);
+      }
+    }
   }
 
   &__body {
@@ -19,6 +54,19 @@
   &__list {
     display: flex;
     column-gap: 240px;
+
+    @include desktop {
+      column-gap: 150px;
+    }
+
+    @include tablet {
+      column-gap: 100px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 30px;
+    }
   }
 
   &__item {
@@ -26,20 +74,52 @@
     flex-direction: column;
     row-gap: 60px;
 
+    @include desktop {
+      row-gap: 50px;
+    }
+
+    @include tablet {
+      row-gap: 40px;
+    }
+
+    @include mobile {
+      row-gap: 30px;
+    }
+
     &-title {
       font-size: 36px;
       color: var(--color-title);
       text-align: center;
+
+      @include desktop {
+        font-size: 32px;
+      }
+
+      @include tablet {
+        font-size: 28px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+      }
     }
 
     &-list {
       display: flex;
       flex-direction: column;
       row-gap: 20px;
+
+      @include mobile {
+        text-align: center;
+      }
     }
 
     &-item {
       font-size: 14px;
+
+      @include mobile {
+        font-size: 12px;
+      }
     }
 
     &-price {
@@ -47,15 +127,36 @@
       font-size: 36px;
       text-align: center;
 
+      @include desktop {
+        font-size: 32px;
+      }
+
+      @include tablet {
+        font-size: 28px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+      }
+
       &::after {
         position: absolute;
         content: '';
-        background: url('../img/services/services-icon.svg') no-repeat;
         bottom: 0;
         left: 65%;
         width: 9px;
         height: 22px;
+        background: url('../img/services/services-icon.svg') no-repeat;
         transform: translate(0, -40%);
+
+        @include tablet {
+          bottom: -10%;
+        }
+
+        @include mobile {
+          bottom: -20%;
+          left: 60%;
+        }
       }
     }
   }
@@ -64,5 +165,10 @@
 .price__last {
   &::after {
     left: 68%;
+
+    @include mobile {
+      left: 62%;
+      top: 50%;
+    }
   }
 }

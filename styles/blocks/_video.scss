@@ -2,7 +2,25 @@
   padding: var(--section-padding-y) 0;
   position: relative;
 
+  @include desktop {
+    padding: 150px 0;
+  }
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+
   &__link {
+    &-img {
+      @include mobile {
+        height: auto;
+      }
+    }
+
 
     &-icon {
       position: absolute;
@@ -11,9 +29,39 @@
       transform: translate(-50%, -50%);
       transition-duration: var(--transition-duration);
 
+      @include desktop {
+        width: 65px;
+        height: 78px;
+      }
+
+      @include tablet {
+        width: 55px;
+        height: 68px;
+      }
+
+      @include mobile {
+        width: 45px;
+        height: 58px;
+      }
+
       &:hover {
         width: 85px;
         height: 98px;
+
+        @include desktop {
+          width: 75px;
+          height: 88px;
+        }
+
+        @include tablet {
+          width: 65px;
+          height: 78px;
+        }
+
+        @include tablet {
+          width: 55px;
+          height: 68px;
+        }
       }
     }
   }

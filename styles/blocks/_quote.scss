@@ -1,5 +1,4 @@
 .quote {
-
   &__inner {
     display: flex;
     flex-direction: column;
@@ -11,6 +10,14 @@
     font-style: italic;
     line-height: 1.11;
     text-align: center;
+
+    @include desktop {
+      font-size: 30px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
   }
 
   &__description {

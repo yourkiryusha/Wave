@@ -1,17 +1,51 @@
 .map {
-  padding: 200px 220px;
+  padding: 200px;
+
+  @include desktop {
+    padding: 150px;
+  }
+
+  @include tablet {
+    padding: 100px
+  }
+
+  @include mobile {
+    padding: 50px;
+  }
+
 
   &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 
     &::after {
       position: absolute;
       content: "";
-      background: url('../img/map/map-icon.svg') no-repeat;
       width: 57px;
       height: 70px;
       top: 16%;
       left: 48%;
+      background: url('../img/map/map-icon.svg') no-repeat;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    @include desktop {
+      height: auto;
+    }
+
+    @include tablet {
+      height: auto;
+    }
+
+    @include mobile {
+      height: auto;
     }
   }
 }

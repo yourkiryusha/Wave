@@ -1,22 +1,54 @@
 .blog {
   padding-bottom: 200px;
 
+  @include desktop {
+    padding-bottom: 150px;
+  }
+
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    padding-bottom: 50px;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
-    row-gap: 230px;
+    row-gap: 100px;
+
+    @include mobile {
+      row-gap: 75px;
+    }
   }
 
   &__title {
     @include title;
+
+    @include desktop {
+      font-size: 40px;
+    }
+
+    @include tablet {
+      font-size: 34px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+
+      &::after {
+        transform: translate(-50%, 25%);
+      }
+    }
   }
 
   &__body {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: url('../img/blog/blog-bg.jpg') center/cover no-repeat;
     height: 800px;
+    background: url('../img/blog/blog-bg.jpg') center/cover no-repeat;
 
     &::after {
       content: '';
@@ -42,23 +74,48 @@
     }
 
     &-title {
+      position: absolute;
+      top: 39%;
+      left: 50%;
+      line-height: 1.16;
       font-family: 'RobotoCondensed Regular', sans-serif;
       font-size: 48px;
       font-weight: 400;
-      line-height: 1.16;
       color: var(--color-light);
-      position: absolute;
-      top: 314px;
-      left: 960px;
+
+      @include desktop {
+        font-size: 44px;
+      }
+
+      @include tablet {
+        font-size: 38px;
+      }
+
+      @include mobile {
+        line-height: 1;
+        font-size: 28px;
+      }
     }
 
     &-description {
+      position: absolute;
+      top: 54%;
+      left: 50%;
       font-family: 'RobotoCondensed Light', sans-serif;
       font-size: 14px;
       color: var(--color-light);
-      position: absolute;
-      top: 425px;
-      left: 965px;
+
+      @include desktop {
+        top: 57%
+      }
+
+      @include tablet {
+        top: 58%;
+      }
+
+      @include mobile {
+        font-size: 12px;
+      }
     }
   }
 }
